@@ -18,7 +18,13 @@ public class MouseClickRobot : MonoBehaviour
         ENERGY_CARBON,
         BUILDING_ENERGY,
         GROWTH_ECONOMIC,
-        GROWTH_POPULATION
+        GROWTH_POPULATION,
+        LeftGraph1,
+        LeftGraph2,
+        LeftGraph3,
+        RightGraph1,
+        RightGraph2,
+        RightGraph3
     }
 
     public PROXY_TYPE proxyType;
