@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class RayCastScript : MonoBehaviour
 {
-    //public Pult_Slider pultSlider;
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
@@ -25,8 +23,6 @@ public class RayCastScript : MonoBehaviour
         }
         if(Input.GetMouseButtonUp(0))
         {
-            // pultSlider.GetComponentInChildren<Image>().color = Color.red;
-            // pultSlider.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -39,25 +35,19 @@ public class RayCastScript : MonoBehaviour
             }
         }
     }
-
     private void CurrentClickedGameObject(GameObject go)
     {
-        // if(go.tag == "SliderSphere")
-        // {
-        //     go.GetComponentInChildren<MeshRenderer>().material.color = Color.cyan;
-        // }
-        // if(go.tag == "SliderHandle")
-        // {
-        //     go.GetComponentInChildren<Image>().color = Color.green;
-        //     go.GetComponentInChildren<MeshRenderer>().material.color = Color.blue;
-        // }
         if(go.tag == "Handle")
         {
             go.GetComponent<Image>().color = Color.white;
             go.GetComponentInChildren<MeshRenderer>().material.color = Color.white;
         }
+        if(go.tag == "Button")
+        {
+            go.GetComponent<Image>().color = Color.white;
+            go.GetComponentInChildren<MeshRenderer>().material.color = Color.white;
+        }
     }
-
     private void CurrentReleasesObject(GameObject go)
     {
         if(go.tag == "Handle")
@@ -65,8 +55,12 @@ public class RayCastScript : MonoBehaviour
         go.GetComponent<Image>().color = Color.red;
         go.GetComponentInChildren<MeshRenderer>().material.color = Color.red; 
         }
+        if(go.tag == "Button")
+        {
+            go.GetComponent<Image>().color = Color.red;
+            go.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+        }
     }
-
     private void PrintName(GameObject go)
     {
         Debug.Log(go.name);
