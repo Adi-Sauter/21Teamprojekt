@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ZenFulcrum.EmbeddedBrowser;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MouseClickRobot : MonoBehaviour
 {
@@ -29,11 +31,17 @@ public class MouseClickRobot : MonoBehaviour
 
     public PROXY_TYPE proxyType;
 
+    public Slider Slider;
+
     public float MinX = -1.0f;
 
     public float MaxX = -1.0f;
 
     private float initialX;
+
+    public PointerUIBase BrowserProxy; 
+
+    public ExtractImage Image;
 
     void Start()
     {
@@ -43,6 +51,10 @@ public class MouseClickRobot : MonoBehaviour
 
     private void Update()
     {
+        Slider.onValueChanged.AddListener(delegate {StartCoroutine(Image.fetchTemperaturePrediction()); });
+        Slider.onValueChanged.AddListener(delegate {StartCoroutine(Image.fetchRightGraph(1)); });
+        Slider.onValueChanged.AddListener(delegate {StartCoroutine(Image.fetchLeftGraph(0)); });
+
         if (Input.GetKeyUp(KeyCode.D))
         {
             if (this.MaxX != -1.0f && this.MinX != -1.0f)
@@ -74,7 +86,7 @@ public class MouseClickRobot : MonoBehaviour
         }
         */
     }
-
+    
     public void setPercentage(float percentage)
     {
         if (this.MaxX != -1.0f && this.MinX != -1.0f)
@@ -96,6 +108,7 @@ public class MouseClickRobot : MonoBehaviour
         if(this.proxyType == type)
         {
             this.setPercentage(percentage);
+            this.BrowserProxy.relevantProxyType = this.proxyType;
         }
     }
 }

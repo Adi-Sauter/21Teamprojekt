@@ -11,6 +11,7 @@ public class ExtractImage : MonoBehaviour
 
     public Browser DisplayRight;
 
+    /*
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.T))
@@ -26,15 +27,16 @@ public class ExtractImage : MonoBehaviour
             StartCoroutine(this.fetchLeftGraph(0));
         }
     }
+    */
 
-    private IEnumerator fetchTemperaturePrediction()
+    public IEnumerator fetchTemperaturePrediction()
     {
         var promise = this.browser.EvalJS("document.getElementsByClassName(\"primary-temp-value svelte-1o6bcxn\")[0].innerHTML");
         yield return promise.ToWaitFor();
         Debug.Log("promised value: " + promise.Value);
     }
 
-    private IEnumerator fetchRightGraph(int index)
+    public IEnumerator fetchRightGraph(int index)
     {
         var promise = this.browser.EvalJS("document.getElementsByClassName(\"chartjs-render-monitor\")[" + index + "].toDataURL(\"img/png\")");
         yield return promise.ToWaitFor();
@@ -44,7 +46,7 @@ public class ExtractImage : MonoBehaviour
         this.DisplayRight.EvalJS("document.getElementById(\"image-container\").height = '" + 500 + "';");
     }
 
-    private IEnumerator fetchLeftGraph(int index)
+    public IEnumerator fetchLeftGraph(int index)
     {
         var promise = this.browser.EvalJS("document.getElementsByClassName(\"chartjs-render-monitor\")[" + index + "].toDataURL(\"img/png\")");
         yield return promise.ToWaitFor();
