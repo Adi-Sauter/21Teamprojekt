@@ -11,7 +11,9 @@ public class ExtractImage : MonoBehaviour
 
     public Browser DisplayRight;
 
-    /*
+    public Browser DisplayCenter;
+
+    
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.T))
@@ -27,13 +29,16 @@ public class ExtractImage : MonoBehaviour
             StartCoroutine(this.fetchLeftGraph(0));
         }
     }
-    */
+    
 
     public IEnumerator fetchTemperaturePrediction()
     {
         var promise = this.browser.EvalJS("document.getElementsByClassName(\"primary-temp-value svelte-1o6bcxn\")[0].innerHTML");
         yield return promise.ToWaitFor();
         Debug.Log("promised value: " + promise.Value);
+        this.DisplayCenter.EvalJS("document.getElementByID(\"image-container\").src = " + promise.Value + ";");
+        this.DisplayCenter.EvalJS("document.getElementById(\"image-container\").width = '" + 500 + "';");
+        this.DisplayCenter.EvalJS("document.getElementById(\"image-container\").height = '" + 500 + "';");
     }
 
     public IEnumerator fetchRightGraph(int index)
