@@ -51,9 +51,6 @@ public class MouseClickRobot : MonoBehaviour
 
     private void Update()
     {
-        Slider.onValueChanged.AddListener(delegate {StartCoroutine(Image.fetchTemperaturePrediction()); });
-        Slider.onValueChanged.AddListener(delegate {StartCoroutine(Image.fetchRightGraph(1)); });
-        Slider.onValueChanged.AddListener(delegate {StartCoroutine(Image.fetchLeftGraph(0)); });
 
         if (Input.GetKeyUp(KeyCode.D))
         {
@@ -101,6 +98,10 @@ public class MouseClickRobot : MonoBehaviour
                 this.transform.localPosition = new Vector3(this.MaxX, this.transform.localPosition.y, this.transform.localPosition.z);
             }
         }
+        this.BrowserProxy.relevantProxyType = this.proxyType;
+        StartCoroutine(Image.fetchTemperaturePrediction());
+        StartCoroutine(Image.fetchRightGraph(1));
+        StartCoroutine(Image.fetchLeftGraph(0));
     }
 
     public void setPercentageNew(float percentage, MouseClickRobot.PROXY_TYPE type) 
@@ -108,7 +109,6 @@ public class MouseClickRobot : MonoBehaviour
         if(this.proxyType == type)
         {
             this.setPercentage(percentage);
-            this.BrowserProxy.relevantProxyType = this.proxyType;
         }
     }
 }
