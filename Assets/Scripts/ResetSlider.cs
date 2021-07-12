@@ -34,8 +34,5 @@ public class ResetSlider : MonoBehaviour
         if (slider.CompareTag("Slider Growth (Population)")) {
             slider.value = 40;
         }
-
-        //int halfvalue = (int) slider.maxValue / 2;
-        //slider.value = halfvalue;
     }
 }

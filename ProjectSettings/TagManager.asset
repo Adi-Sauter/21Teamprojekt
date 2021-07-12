@@ -22,6 +22,7 @@ TagManager:
   - SliderHandle
   - Handle
   - Button
+  - easterEgg
   layers:
   - Default
   - TransparentFX

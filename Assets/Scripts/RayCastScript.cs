@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class RayCastScript : MonoBehaviour
 {
+    private GameObject hitObject;
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
@@ -17,6 +18,7 @@ public class RayCastScript : MonoBehaviour
                 if(hit.transform)
                 {
                     //PrintName(hit.transform.gameObject);
+                    this.hitObject = hit.transform.gameObject;
                     CurrentClickedGameObject(hit.transform.gameObject);
                 }   
             }
@@ -28,10 +30,26 @@ public class RayCastScript : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit))
             {
-                if(hit.transform)
-                {
-                    CurrentReleasesObject(hit.transform.gameObject);
-                }   
+                // perform a specified action on the object that was hit last
+                CurrentReleasedObject(hitObject);
+
+                //different method, where it´s checked first wether hit.transform exists (hit.transform != null)
+                // if(hit.transform)
+                // {
+                //      if(hit.transform.gameObject.tag != hitObject.tag)
+                //     {
+                //         Debug.Log("hit.transform != hitObject");
+                //         PrintTag(hit.transform.gameObject.tag, "new hitObject");
+                //         PrintTag(hitObject.tag, "hitobject");
+                //         CurrentReleasedObject(hitObject);
+                //     } else
+                //     {
+                //         Debug.Log("hit.transform == hitObject");
+                //         PrintTag(hit.transform.gameObject.tag, "new hitObject");
+                //         PrintTag(hitObject.tag, "hitobject");
+                //         CurrentReleasedObject(hit.transform.gameObject);
+                //     }
+                // }
             }
         }
     }
@@ -44,11 +62,11 @@ public class RayCastScript : MonoBehaviour
         }
         if(go.tag == "Button")
         {
-            go.GetComponent<Image>().color = Color.white;
-            go.GetComponentInChildren<MeshRenderer>().material.color = Color.white;
+            go.GetComponent<Image>().color = Color.black;
+            go.GetComponentInChildren<MeshRenderer>().material.color = Color.black;
         }
     }
-    private void CurrentReleasesObject(GameObject go)
+    private void CurrentReleasedObject(GameObject go)
     {
         if(go.tag == "Handle")
         {
@@ -57,12 +75,16 @@ public class RayCastScript : MonoBehaviour
         }
         if(go.tag == "Button")
         {
-            go.GetComponent<Image>().color = Color.red;
-            go.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+            go.GetComponent<Image>().color = Color.blue;
+            go.GetComponentInChildren<MeshRenderer>().material.color = Color.blue;
         }
     }
     private void PrintName(GameObject go)
     {
         Debug.Log(go.name);
+    }
+    private void PrintTag(string tag, string name)
+    {
+        Debug.Log("Name des " + name + ": " + tag);
     }
 }
