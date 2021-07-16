@@ -27,7 +27,7 @@ public class ExtractImage : MonoBehaviour
         yield return new WaitForSeconds(2f);
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph1;
         yield return new WaitForSeconds(2f);
-        Debug.Log("Nocheinen ");
+        Debug.Log("Noch einen ");
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph2;
         yield return new WaitForSeconds(2f);
         Debug.Log("Und nochmal");
@@ -44,7 +44,9 @@ public class ExtractImage : MonoBehaviour
     
     public IEnumerator fetchTemperaturePrediction()
     {
-        var promise = this.browser.EvalJS("document.getElementsByClassName(\"primary-temp-value svelte-1xplu3t\")[0].innerHTML");
+        var promise = this.browser.EvalJS("document.getElementsByClassName(\"primary-temp-value\")[0].innerHTML");
+        // old version:
+        //var promise = this.browser.EvalJS("document.getElementsByClassName(\"primary-temp-value svelte-1xplu3t\")[0].innerHTML");
         yield return promise.ToWaitFor();
         Debug.Log("promised value: " + promise.Value);
     }

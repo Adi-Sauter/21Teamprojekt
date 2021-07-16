@@ -24,6 +24,10 @@ public class CollisionScript : MonoBehaviour
     {
         StartCoroutine(Teleportation(other));
     }
+
+    // plays the Fade-Animation:
+    // an Image turns from invincible to black to invincible to create a feeling of teleportation without a hard cut
+    // takes 60 frames (1 second) in total
      public void FadingOut()
     {
         FadeScreen.GetComponent<Animation>().Play("BlackFade");
@@ -55,10 +59,13 @@ public class CollisionScript : MonoBehaviour
             FadingOut();
             PreEasterEggSign.SetActive(false);
             yield return new WaitForSeconds(0.5f);
+            // display EasterEgg
             EasterEggCanvas.SetActive(true);
-            yield return new WaitForSeconds(3.0f);
+            // show EasterEgg for 5 seconds
+            yield return new WaitForSeconds(5.0f);
             FadingOut();
             EasterEggCanvas.SetActive(false);
+            // destroy EasterEgg after 5 seconds
             Destroy(EasterEggCube);   
             BlackScreenCanvas.SetActive(false);
             AfterEasterEggSign.SetActive(true);

@@ -1,121 +1,159 @@
 Using pre-set license
-Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19041.1052; Version 2004; 64bit' Language: 'de' Physical Memory: 8109 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Unity.exe
+/Applications/Unity/Hub/Editor/2020.3.10f1/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/mail/OneDrive/Dokumente/GitHub/21Teamprojekt
+/Users/adisauter/Documents/Studium/4. Semester/Teamprojekt/Projekt/21Teamprojekt
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51210
-Successfully changed project path to: C:/Users/mail/OneDrive/Dokumente/GitHub/21Teamprojekt
-C:/Users/mail/OneDrive/Dokumente/GitHub/21Teamprojekt
+55913
+Successfully changed project path to: /Users/adisauter/Documents/Studium/4. Semester/Teamprojekt/Projekt/21Teamprojekt
+/Users/adisauter/Documents/Studium/4. Semester/Teamprojekt/Projekt/21Teamprojekt
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 71.67 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 69.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.5f1 (8095aa901b9b)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/mail/OneDrive/Dokumente/GitHub/21Teamprojekt/Assets
+Initialize engine version: 2020.3.10f1 (297d780c91bc)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.10f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/adisauter/Documents/Studium/4. Semester/Teamprojekt/Projekt/21Teamprojekt/Assets
 GfxDevice: creating device client; threaded=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) HD Graphics 620 (ID=0x5916)
-    Vendor:   
-    VRAM:     4054 MB
-    Driver:   27.20.100.8682
+2021-07-16 14:37:28.113 Unity[59984:895506] Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 645 (low power)
+2021-07-16 14:37:28.113 Unity[59984:895506] Metal devices available: 1
+2021-07-16 14:37:28.113 Unity[59984:895506] 0: Intel(R) Iris(TM) Plus Graphics 645 (low power)
+2021-07-16 14:37:28.113 Unity[59984:895506] Using device Intel(R) Iris(TM) Plus Graphics 645 (low power)
+Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 645
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56964
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.10f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.10f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.10f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56984
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002927 seconds.
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 59.62 ms, found 8 plugins.
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.10f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.003226 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 45.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.879 seconds
+- Completed reload, in  1.442 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.015381 seconds.
+Registered in 0.010589 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.41 ms, found 8 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.491 seconds
+- Completed reload, in  1.277 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 1.19 ms, found 8 plugins.
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.10f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1548 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 74.8 MB.
-System memory in use after: 74.8 MB.
+System memory in use before: 152.2 MB.
+System memory in use after: 152.3 MB.
 
-Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 1970.
-Total: 4.796700 ms (FindLiveObjects: 0.418700 ms CreateObjectMapping: 0.280700 ms MarkObjects: 3.932200 ms  DeleteObjects: 0.161300 ms)
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 1979.
+Total: 2.415908 ms (FindLiveObjects: 0.336523 ms CreateObjectMapping: 0.116567 ms MarkObjects: 1.873462 ms  DeleteObjects: 0.087958 ms)
 
 ========================================================================
 Received Import Request.
+  path: Assets/Animation/BlackFade.anim
+  artifactKey: Guid(da17edfb8105e4397926b9139eff9fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/BlackFade.anim using Guid(da17edfb8105e4397926b9139eff9fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e6135e5da14f85d3b58b595a2420a8') in 1.259640 seconds
+  Import took 1.263523 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.732162 seconds.
+  path: Assets/Animation/RawImage.controller
+  artifactKey: Guid(016247f92fc43497290561297c50dda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/RawImage.controller using Guid(016247f92fc43497290561297c50dda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The legacy Animation Clip "BlackFade" cannot be used in the State "BlackFade". Legacy AnimationClips are not allowed in Animator Controllers.
+
+ -> (artifact id: '1fa30cb86187d27248aa83447bda12da') in 0.373092 seconds
+  Import took 0.377964 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010072 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.414 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1525 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 159.2 MB.
+System memory in use after: 159.3 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 1982.
+Total: 2.273968 ms (FindLiveObjects: 0.298225 ms CreateObjectMapping: 0.061754 ms MarkObjects: 1.885767 ms  DeleteObjects: 0.026471 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 210.753336 seconds.
   path: Assets/ZFBrowser/Scripts/BrowserUI/ExtractImage.cs
   artifactKey: Guid(8133228dc15f43c4ebf539e7ea9112c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZFBrowser/Scripts/BrowserUI/ExtractImage.cs using Guid(8133228dc15f43c4ebf539e7ea9112c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85e0b676f6e4ed9693c6fbfed4b9c5ed') in 0.092353 seconds
-  Import took 0.096812 seconds .
+Start importing Assets/ZFBrowser/Scripts/BrowserUI/ExtractImage.cs using Guid(8133228dc15f43c4ebf539e7ea9112c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4de25bce64146fb37ac91b622cd6775') in 0.529992 seconds
+  Import took 0.533574 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.016867 seconds.
+Registered in 0.027098 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 8 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.255 seconds
+- Completed reload, in  1.178 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.63 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1525 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 72.9 MB.
-System memory in use after: 73.0 MB.
+System memory in use before: 163.7 MB.
+System memory in use after: 163.8 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 1973.
-Total: 3.186200 ms (FindLiveObjects: 0.245000 ms CreateObjectMapping: 0.082400 ms MarkObjects: 2.812300 ms  DeleteObjects: 0.043500 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 1985.
+Total: 2.001757 ms (FindLiveObjects: 0.189709 ms CreateObjectMapping: 0.055439 ms MarkObjects: 1.733626 ms  DeleteObjects: 0.021705 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 115.734753 seconds.
+  path: Assets/ZFBrowser/Scripts/BrowserUI/ExtractImage.cs
+  artifactKey: Guid(8133228dc15f43c4ebf539e7ea9112c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZFBrowser/Scripts/BrowserUI/ExtractImage.cs using Guid(8133228dc15f43c4ebf539e7ea9112c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c5bcee55c9336b92ef44530a1a67ea4') in 0.004827 seconds
+  Import took 0.008713 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007448 seconds.
+Registered in 0.023076 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.73 ms, found 8 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.808 seconds
+- Completed reload, in  1.717 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.00 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1525 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.0 MB.
-System memory in use after: 73.1 MB.
+System memory in use before: 164.0 MB.
+System memory in use after: 164.1 MB.
 
-Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 1976.
-Total: 40.766900 ms (FindLiveObjects: 4.206500 ms CreateObjectMapping: 0.267000 ms MarkObjects: 36.239100 ms  DeleteObjects: 0.051300 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 1988.
+Total: 3.642565 ms (FindLiveObjects: 0.868529 ms CreateObjectMapping: 0.190447 ms MarkObjects: 2.547139 ms  DeleteObjects: 0.034934 ms)
 
