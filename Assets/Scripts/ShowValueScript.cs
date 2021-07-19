@@ -6,7 +6,6 @@ using TMPro;
 public class ShowValueScript : MonoBehaviour
 {
     TextMeshProUGUI valueText;
-    // Start is called before the first frame update
     void Start()
     {
         valueText = GetComponent<TextMeshProUGUI>();

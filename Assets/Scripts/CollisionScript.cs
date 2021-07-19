@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CollisionScript : MonoBehaviour
 {
     public GameObject targetinSim;
+
     public GameObject targetinMus;
 
     public GameObject FadeScreen;
@@ -32,6 +33,8 @@ public class CollisionScript : MonoBehaviour
     {
         FadeScreen.GetComponent<Animation>().Play("BlackFade");
     }
+
+    // Coroutine for the actual teleportation/ easteregg
     IEnumerator Teleportation(Collider other) 
     {
         if(other.gameObject.CompareTag("toSimulator"))
@@ -70,7 +73,5 @@ public class CollisionScript : MonoBehaviour
             BlackScreenCanvas.SetActive(false);
             AfterEasterEggSign.SetActive(true);
         }
-        //Debug.Log("Wating");
-        //yield return new WaitForSeconds(2);
     }
 }
