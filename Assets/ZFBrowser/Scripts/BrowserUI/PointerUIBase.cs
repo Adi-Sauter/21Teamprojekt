@@ -354,23 +354,26 @@ public abstract class PointerUIBase : MonoBehaviour, IBrowserUI {
         {
             this.relevantProxyType = MouseClickRobot.PROXY_TYPE.INITIAL;
 		} 
-		else if (Input.GetKeyUp(KeyCode.H)) {
-			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph1;
-		}
-		else if (Input.GetKeyUp(KeyCode.J)) {
-			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph2;
-		}
-		else if (Input.GetKeyUp(KeyCode.K)) {
-			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph3;
-		}
 		else if (Input.GetKeyUp(KeyCode.Q)) {
-			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.RightGraph1;
+			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.TRANSPORT_ELEC;
 		}
 		else if (Input.GetKeyUp(KeyCode.W)) {
-			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.RightGraph2;
+			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.ENERGY_COAL;
 		}
 		else if (Input.GetKeyUp(KeyCode.E)) {
-			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.RightGraph3;
+			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.ENERGY_RENEWABLES;
+		}
+		else if (Input.GetKeyUp(KeyCode.R)) {
+			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.ENERGY_CARBON;
+		}
+		else if (Input.GetKeyUp(KeyCode.T)) {
+			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.GROWTH_ECONOMIC;
+		}
+		else if (Input.GetKeyUp(KeyCode.Z)) {
+			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.BUILDING_ENERGY;
+		}
+        else if (Input.GetKeyUp(KeyCode.U)) {
+			this.relevantProxyType = MouseClickRobot.PROXY_TYPE.GROWTH_POPULATION;
 		}
         
 

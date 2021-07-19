@@ -15,6 +15,9 @@ public class ExtractImage : MonoBehaviour
 
     public PointerUIBase Proxy;
 
+    //public var TempNumber;
+
+    
     void Start() {
         StartCoroutine(this.GetTheRightGraph());
     }
@@ -42,6 +45,7 @@ public class ExtractImage : MonoBehaviour
 
     }
     
+    
     public IEnumerator fetchTemperaturePrediction()
     {
         var promise = this.browser.EvalJS("document.getElementsByClassName(\"primary-temp-value\")[0].innerHTML");
@@ -49,6 +53,9 @@ public class ExtractImage : MonoBehaviour
         //var promise = this.browser.EvalJS("document.getElementsByClassName(\"primary-temp-value svelte-1xplu3t\")[0].innerHTML");
         yield return promise.ToWaitFor();
         Debug.Log("promised value: " + promise.Value);
+        //this.TempNumber = (float) promise.Value;
+        //Debug.Log(TempNumber);
+        SliderEventSystem.aTemperatureEvent(promise.Value);
     }
     
 
