@@ -65,10 +65,10 @@ public class CollisionScript : MonoBehaviour
             // display EasterEgg
             EasterEggCanvas.SetActive(true);
             // show EasterEgg for 5 seconds
-            yield return new WaitForSeconds(5.0f);
-            FadingOut();
+            yield return new WaitForSeconds(10.0f);
+            //FadingOut();
             EasterEggCanvas.SetActive(false);
-            // destroy EasterEgg after 5 seconds
+            // destroy EasterEggCollider after 10 seconds
             Destroy(EasterEggCube);   
             BlackScreenCanvas.SetActive(false);
             AfterEasterEggSign.SetActive(true);
