@@ -5,6 +5,8 @@ using ZenFulcrum.EmbeddedBrowser;
 
 public class ExtractImage : MonoBehaviour
 {
+    //Extracts the Image from the webside 
+
     public Browser browser;
 
     public Browser DisplayLeft;
@@ -19,12 +21,17 @@ public class ExtractImage : MonoBehaviour
 
     
     void Start() {
+        //start Coroutine to get the right graph
         StartCoroutine(this.GetTheRightGraph());
     }
     
     public IEnumerator GetTheRightGraph() {
         
+        //simulates the clicks on the BrowserPlugIn to get right graph
+
+        //waiting for 10sec to let the BrowserPlugIn load 
         yield return new WaitForSeconds(10f);
+        //sets the relevant Proxy from the PointerUiBase Script to the right Proxy 
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.INITIAL;
         Debug.Log("Get The Right Graph Now!!");
         yield return new WaitForSeconds(2f);
@@ -48,19 +55,18 @@ public class ExtractImage : MonoBehaviour
     
     public IEnumerator fetchTemperaturePrediction()
     {
+        //gets the temperatur predicton of the Enroad-Simulator 
         var promise = this.browser.EvalJS("document.getElementsByClassName(\"primary-temp-value\")[0].innerHTML");
-        // old version:
-        //var promise = this.browser.EvalJS("document.getElementsByClassName(\"primary-temp-value svelte-1xplu3t\")[0].innerHTML");
         yield return promise.ToWaitFor();
         Debug.Log("promised value: " + promise.Value);
-        //this.TempNumber = (float) promise.Value;
-        //Debug.Log(TempNumber);
+        //updates a change in "promis" to the SliderEventSystem 
         SliderEventSystem.aTemperatureEvent(promise.Value);
     }
     
 
     public IEnumerator fetchRightGraph(int index)
     {
+        //gets the graph on the right side of the Enroad-Simulator 
         var promise = this.browser.EvalJS("document.getElementsByClassName(\"chartjs-render-monitor\")[" + index + "].toDataURL(\"img/png\")");
         yield return promise.ToWaitFor();
         Debug.Log("promised value: " + promise.Value);
@@ -71,6 +77,7 @@ public class ExtractImage : MonoBehaviour
 
     public IEnumerator fetchLeftGraph(int index)
     {
+        //gets the graph on the left side of the Enroad-Simulator 
         var promise = this.browser.EvalJS("document.getElementsByClassName(\"chartjs-render-monitor\")[" + index + "].toDataURL(\"img/png\")");
         yield return promise.ToWaitFor();
         Debug.Log("promised value: " + promise.Value);
