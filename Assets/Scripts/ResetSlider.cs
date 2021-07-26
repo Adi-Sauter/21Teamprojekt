@@ -8,6 +8,7 @@ public class ResetSlider : MonoBehaviour
 {
 
     //sets every slider back to its original position 
+    // (Status quo on the EnRoads-Website)
     public void Reset(Slider slider)
     {
 

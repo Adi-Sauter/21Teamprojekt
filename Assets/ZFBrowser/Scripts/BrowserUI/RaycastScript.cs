@@ -4,7 +4,7 @@ using UnityEngine;
 using ZenFulcrum.EmbeddedBrowser;
 using UnityEngine.UI;
 
-public class SetSliderToOriginal : MonoBehaviour
+public class RaycastScript : MonoBehaviour
 {
 
     public PointerUIBase Proxy;
@@ -14,6 +14,7 @@ public class SetSliderToOriginal : MonoBehaviour
     public ExtractImage Image;
     void Update()
     {
+        // mouse down
         if(Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -29,6 +30,7 @@ public class SetSliderToOriginal : MonoBehaviour
                 }   
             }
         }
+        // mouse up
         if(Input.GetMouseButtonUp(0))
         {
             RaycastHit hit;
@@ -59,6 +61,7 @@ public class SetSliderToOriginal : MonoBehaviour
             }
         }
     }
+    // method to manipulate the current clicked gameobject
     private void CurrentClickedGameObject(GameObject go)
     {
         if(go.tag == "Handle")
@@ -74,6 +77,7 @@ public class SetSliderToOriginal : MonoBehaviour
            
         }
     }
+    // method to manipulate the gameobject that the mouse was released on
     private void CurrentReleasedObject(GameObject go)
     {
         if(go.tag == "Handle")
@@ -87,20 +91,6 @@ public class SetSliderToOriginal : MonoBehaviour
             go.GetComponentInChildren<MeshRenderer>().material.color = Color.blue;
         }
     }
-    
-    private void PrintName(GameObject go)
-    {
-        Debug.Log(go.name);
-    }
-    private void PrintTag(string tag, string name)
-    {
-        Debug.Log("Name des " + name + ": " + tag);
-    }
-
-    // void Test()
-    // {
-    //     StartCoroutine(this.ResetSlider());
-    // }
 
     public IEnumerator ResetSlider() {
         
@@ -130,7 +120,15 @@ public class SetSliderToOriginal : MonoBehaviour
         StartCoroutine(Image.fetchTemperaturePrediction());
         StartCoroutine(Image.fetchRightGraph(1));
         StartCoroutine(Image.fetchLeftGraph(0));
-
+    }
+    // two helper functions to test the functionality
+    private void PrintName(GameObject go)
+    {
+        Debug.Log(go.name);
+    }
+    private void PrintTag(string tag, string name)
+    {
+        Debug.Log("Name of " + name + ": " + tag);
     }
 
 
