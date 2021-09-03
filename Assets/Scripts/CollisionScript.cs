@@ -29,9 +29,14 @@ public class CollisionScript : MonoBehaviour
     // plays the Fade-Animation:
     // an Image turns from invincible to black to invincible to create a feeling of teleportation without a hard cut
     // takes 60 frames (1 second) in total
-     public void FadingOut()
+     public void FadingToOpaque()
     {
-        FadeScreen.GetComponent<Animation>().Play("BlackFade");
+        FadeScreen.GetComponent<Animation>().Play("AnimFadeToOpaque");
+    }
+    
+    public void FadingToTransparent()
+    {
+        FadeScreen.GetComponent<Animation>().Play("AnimFadeToTransparent");
     }
 
     // Coroutine for the actual teleportation/ easteregg
@@ -41,26 +46,32 @@ public class CollisionScript : MonoBehaviour
         {
             BlackScreenCanvas.SetActive(true);
             //Debug.Log("if-case: Collision with " + other.gameObject.name);
-            FadingOut();
+            FadingToOpaque();
             yield return new WaitForSeconds(0.5f);
             this.transform.localPosition = new Vector3(targetinSim.transform.position.x, this.transform.position.y, targetinSim.transform.position.z + 1    );
+            FadingToTransparent();
+            yield return new WaitForSeconds(0.5f);
             BlackScreenCanvas.SetActive(false);
 
         } else if(other.gameObject.CompareTag("toMuseum"))
         {
             BlackScreenCanvas.SetActive(true);
             //Debug.Log("elseif-case: Collision with " + other.gameObject.name);
-            FadingOut();
+            FadingToOpaque();
             yield return new WaitForSeconds(0.5f);
             this.transform.localPosition = new Vector3(targetinMus.transform.position.x, this.transform.position.y, targetinMus.transform.position.z);
+            FadingToTransparent();
+            yield return new WaitForSeconds(0.5f);
             BlackScreenCanvas.SetActive(false);
 
         } else if(other.gameObject.CompareTag("easterEgg"))
         {
             BlackScreenCanvas.SetActive(true);
             //Debug.Log("elseif-case: Collision with " + other.gameObject.name);
-            FadingOut();
+            FadingToOpaque();
             PreEasterEggSign.SetActive(false);
+            yield return new WaitForSeconds(0.5f);
+            FadingToTransparent();
             yield return new WaitForSeconds(0.5f);
             // display EasterEgg
             EasterEggCanvas.SetActive(true);
