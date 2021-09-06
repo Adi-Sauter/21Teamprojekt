@@ -74,7 +74,6 @@ public class RaycastScript : MonoBehaviour
             go.GetComponent<Image>().color = Color.black;
             go.GetComponentInChildren<MeshRenderer>().material.color = Color.black;
             StartCoroutine(ResetSlider());
-           
         }
     }
     // method to manipulate the gameobject that the mouse was released on
