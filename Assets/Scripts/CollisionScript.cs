@@ -66,21 +66,21 @@ public class CollisionScript : MonoBehaviour
 
         } else if(other.gameObject.CompareTag("easterEgg"))
         {
+            Destroy(EasterEggCube); 
             BlackScreenCanvas.SetActive(true);
             //Debug.Log("elseif-case: Collision with " + other.gameObject.name);
             FadingToOpaque();
             PreEasterEggSign.SetActive(false);
             yield return new WaitForSeconds(0.5f);
             FadingToTransparent();
-            yield return new WaitForSeconds(0.5f);
+            //yield return new WaitForSeconds(0.5f);
             // display EasterEgg
-            EasterEggCanvas.SetActive(true);
-            // show EasterEgg for 5 seconds
+            EasterEggCanvas.SetActive(true); 
+            // show EasterEgg for 10 seconds
             yield return new WaitForSeconds(10.0f);
             //FadingOut();
             EasterEggCanvas.SetActive(false);
-            // destroy EasterEggCollider after 10 seconds
-            Destroy(EasterEggCube);   
+            // destroy EasterEggCollider after 10 seconds  
             BlackScreenCanvas.SetActive(false);
             AfterEasterEggSign.SetActive(true);
         }
