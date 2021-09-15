@@ -13,11 +13,7 @@ public class ExtractImage : MonoBehaviour
 
     public Browser DisplayRight;
 
-    public Browser DisplayCenter;
-
     public PointerUIBase Proxy;
-
-    //public var TempNumber;
 
     
     void Start() {
@@ -30,16 +26,16 @@ public class ExtractImage : MonoBehaviour
         //simulates the clicks on the BrowserPlugIn to get right graph
 
         //waiting for 10sec to let the BrowserPlugIn load 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         //sets the relevant Proxy from the PointerUiBase Script to the right Proxy 
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.INITIAL;
         Debug.Log("Get The Right Graph Now!!");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph1;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         Debug.Log("Noch einen ");
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph2;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         Debug.Log("Und nochmal");
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph3;
         yield return new WaitForSeconds(2f);
