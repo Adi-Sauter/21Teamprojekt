@@ -11,3 +11,5 @@ public class SliderEventSystem : MonoBehaviour
     public delegate void TemperatureEvent(string text);
     public static TemperatureEvent aTemperatureEvent;
 }
+
+

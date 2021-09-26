@@ -33,17 +33,15 @@ public class ExtractImage : MonoBehaviour
         yield return new WaitForSeconds(5f);
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph1;
         yield return new WaitForSeconds(5f);
-        Debug.Log("Noch einen ");
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph2;
         yield return new WaitForSeconds(5f);
-        Debug.Log("Und nochmal");
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph3;
         yield return new WaitForSeconds(2f);
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.RightGraph1;
         yield return new WaitForSeconds(2f);
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.RightGraph2;
         yield return new WaitForSeconds(2f);
-        Debug.Log("Der letzte!");
+        Debug.Log("The last one!");
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.RightGraph3;
 
     }
