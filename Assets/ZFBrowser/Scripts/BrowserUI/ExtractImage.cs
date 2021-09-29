@@ -30,11 +30,11 @@ public class ExtractImage : MonoBehaviour
         //sets the relevant Proxy from the PointerUiBase Script to the right Proxy 
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.INITIAL;
         Debug.Log("Get The Right Graph Now!!");
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph1;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph2;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.LeftGraph3;
         yield return new WaitForSeconds(2f);
         this.Proxy.relevantProxyType = MouseClickRobot.PROXY_TYPE.RightGraph1;
